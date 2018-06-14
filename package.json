@@ -1,0 +1,14 @@
+{
+  "name": "yes-or-no",
+  "version": "1.0.0",
+  "description": "It is what it is",
+  "main": "index.js",
+  "scripts": {
+    "watch": "browser-sync start --server . --files \"**/*.css, **/*.html\""
+  },
+  "author": "@rfoel",
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^2.11.0"
+  }
+}
