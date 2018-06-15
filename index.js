@@ -1,2 +1,8 @@
-const answer = document.querySelector('.answer')
-answer.textContent = Math.round(Math.random()) ? 'YES' : 'NO'
+const container = document.querySelector('.container')
+
+const answer = Math.round(Math.random())
+container.textContent = answer ? 'YES' : 'NO'
+
+gtag('event', 'answer', {
+  value: answer
+})
