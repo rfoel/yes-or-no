@@ -17,12 +17,33 @@
     gtag('config', 'UA-112166588-2');
   </script>
 
-  <link rel="stylesheet" href="index.css">
+  <style>
+    html,
+    body {
+      height: 100%;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+      font-size: 10rem;
+    }
+  </style>
 </head>
 
 <body>
-  <p class="container"></p>
-  <script src="index.js"></script>
+  <p class="answer"></p>
+  <script>
+    const container = document.querySelector('.answer')
+    const answer = Math.round(Math.random())
+    container.textContent = answer ? 'YES' : 'NO'
+    gtag('event', 'answer', {
+      event_label: answer ? 'YES' : 'NO',
+      value: answer
+    })
+  </script>
 </body>
 
 </html>
